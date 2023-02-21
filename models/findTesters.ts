@@ -2,6 +2,13 @@ import { db } from "../db";
 import { TesterBugCount } from "../types/testerBugCount";
 import { RowDataPacket } from "mysql2";
 
+/**
+ * Uses the sql connection to send a query to the database.
+ * The rows returned are pushed to a list of an object containing a testerId and bug count.
+ * @param country
+ * @param device
+ * @param callback
+ */
 export const findTesters = (
   country: string,
   device: string,

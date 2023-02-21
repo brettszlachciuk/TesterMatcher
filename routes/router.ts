@@ -4,6 +4,9 @@ import { TesterBugCount } from "../types/testerBugCount";
 
 export const router = express.Router();
 
+/**
+ * Uses a URL with params '/:country/:device' to get the country and device desired to find testers.
+ */
 router.get("/:country/:device", async (req: Request, res: Response) => {
   const country: string = req.params.country;
   const device: string = req.params.device;
@@ -21,6 +24,9 @@ router.get("/:country/:device", async (req: Request, res: Response) => {
   );
 });
 
+/**
+ * Confirm connection to the server.
+ */
 router.get("/", (req, res, next) => {
   console.log("Connected");
 });
