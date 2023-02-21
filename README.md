@@ -11,3 +11,4 @@ Libraries Used:
 MySQL2: A library that allows connection to a MySQL database and queries written in TypeScript to be read by the database.
 Express: Manage routes and set up server.
 
+Included is a video in the res folder of various requests. I populated the database manually and so it only exists locally right now so I don't have a solution for loading the database onto another machine right now.  
