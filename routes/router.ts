@@ -7,7 +7,7 @@ export const router = express.Router();
 /**
  * Uses a URL with params '/:country/:device' to get the country and device desired to find testers.
  */
-router.get("/:country/:device", async (req: Request, res: Response) => {
+router.get("/:country/:device", (req: Request, res: Response) => {
   const country: string = req.params.country;
   const device: string = req.params.device;
   model.findTesters(
@@ -19,7 +19,6 @@ router.get("/:country/:device", async (req: Request, res: Response) => {
       }
 
       res.status(200).json({ data: testerBugCounts });
-      console.log("Successful");
     }
   );
 });
